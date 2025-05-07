@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nexl_app/bindings/initial_bindinngs.dart';
 import 'routes/app_pages.dart';
-import 'theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());

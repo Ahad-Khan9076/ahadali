@@ -10,6 +10,8 @@ class CustomButton extends StatelessWidget {
     required this.text,
     required this.onTap,
     this.isFilled = true,
+    required Null Function() onPressed,
+    required Color color,
   });
 
   @override
@@ -20,7 +22,7 @@ class CustomButton extends StatelessWidget {
         foregroundColor: isFilled ? Colors.white : AppColors.primary,
         side: BorderSide(color: AppColors.primary),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 34),
       ),
       onPressed: onTap,
       child: Text(text),

@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:nexl_app/modules/auth/forgot_password_view.dart';
 import 'package:nexl_app/modules/auth/login_view.dart';
 import 'package:nexl_app/modules/auth/signup_view.dart';
 import 'package:nexl_app/modules/auth/splash_screen.dart';
+import 'package:nexl_app/modules/home/home_screen.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -11,6 +13,7 @@ class AppPages {
     GetPage(name: AppRoutes.SPLASH, page: () => SplashScreen()),
     GetPage(name: AppRoutes.LOGIN, page: () => LoginView()),
     GetPage(name: AppRoutes.SIGNUP, page: () => SignupView()),
-    // GetPage(name: AppRoutes.HOME, page: () => HomeScreen()),
+    GetPage(name: AppRoutes.FORGOTPASSWROD, page: () => ForgotPasswordView()),
+    GetPage(name: AppRoutes.HOME, page: () => HomeScreen()),
   ];
 }

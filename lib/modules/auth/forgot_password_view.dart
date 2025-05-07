@@ -4,10 +4,8 @@ import 'package:nexl_app/widgets/custom_text_field.dart';
 import '../../../theme/app_colors.dart';
 import '../../../widgets/custom_button.dart';
 
-class LoginView extends StatelessWidget {
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-
+class ForgotPasswordView extends StatelessWidget {
+  final TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +17,7 @@ class LoginView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Login",
+                "Forgot Password",
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -28,7 +26,7 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const Text(
-                "Welcome back! Please login to your account.",
+                "Enter your email to receive password reset instructions.",
                 style: TextStyle(fontSize: 16, color: Colors.black54),
               ),
               const SizedBox(height: 30),
@@ -39,51 +37,25 @@ class LoginView extends StatelessWidget {
                 hintText: "your@email.com",
                 icon: Icons.email,
               ),
-              const SizedBox(height: 12),
-              CustomTextField(
-                controller: passwordController,
-                label: "Password",
-                hintText: "Enter Password",
-                icon: Icons.lock,
-                obscureText: true,
-              ),
-
-              const SizedBox(height: 5),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    Get.toNamed('/forgotpassword');
-                  },
-                  child: const Text("Forgot Password?"),
-                ),
-              ),
               const SizedBox(height: 20),
 
               Center(
                 child: CustomButton(
-                  text: "Login",
+                  text: "Send Reset Link",
                   onPressed: () {
-                    // Get.toNamed('/home');
+                    // Handle sending reset link
                   },
                   color: AppColors.primary,
-                  onTap: () {
-                    Get.toNamed('/home');
-                  },
+                  onTap: () {},
                 ),
               ),
 
-              const SizedBox(height: 25),
-
+              const SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {
-                    Get.toNamed('/signup');
-                  },
-                  child: Center(
-                    child: const Text("Don't have an account? Sign up"),
-                  ),
+                  onPressed: () => Get.back(),
+                  child: const Text("Back to Login"),
                 ),
               ),
             ],
